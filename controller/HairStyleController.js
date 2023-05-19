@@ -22,7 +22,7 @@ export async function AddHairStyle(req, res) {
 
 export function GetAllHairStyle(req, res) {
     hairstyle.find()
-        .select('Url Des')
+        .select('Url Des Name')
         .then(allHairStyle => {
             return res.status(200).json({
                 success: true,
